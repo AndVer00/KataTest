@@ -108,8 +108,8 @@ public class Main {
             var value1 = Integer.valueOf(numRomanToArabic(num1));
             var value2 = Integer.valueOf(numRomanToArabic(num2));
             var result = processFunction(value1, value2, sign);
-            if (result < 0) {
-                throw new RuntimeException("Roman numbers cant be negative!");
+            if (result <= 0) {
+                throw new RuntimeException("Roman numbers cannot be negative or zero!");
             }
             return numArabicToRoman(result);
         }
